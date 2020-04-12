@@ -1,11 +1,15 @@
-# pipeline
-用Go语言搭建并行处理管道，实现一个外部排序管道
+# Pipeline
 
-## 简介
-从文件读取数据源，读取文件是分块读取，对每一块使用内部排序进行排序，然后两两归并。
-每个归并好对节点都是排好序对大数据，然后再两两归并，最后写入文件。
-最后实现了网络版对外部排序对外进行服务
+Pipeline is a simple pipeline written in Go. It builds a parallel processing pipeline in Go language to realize an external sort pipeline.
 
-## 介绍文档
-[pipeline介绍](http://wxning.com/2020/04/02/pipeline/)
+## Introduction
+
+Pipeline reads the data source from the file(stdin/stdout). The reading is in blocks. Using internal sorting to sort each block. And then merge them two by two.
+
+Each merged node is sorted for big data. Then merging them two by two. And finally it will be written to the file.
+
+Finally, the final version provides external services for external sort.
+
+## Document introduction
+[pipeline introduction](http://wxning.com/2020/04/02/pipeline/)
 
